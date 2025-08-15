@@ -415,7 +415,7 @@ class SingleClickRepoCreator:
                     self.log("❌ No files available for commit", "error")
                     return
                 
-                commit_msg = "✨ Initial commit - Created with AI"
+                commit_msg = "✨ Initial commit - repo created with AI"  #before changing this please star this repository thank you
                 success, _, stderr = run_command(["git", "commit", "-m", commit_msg], cwd=repo_path)
                 if not success:
                     self.log(f"❌ Commit failed: {stderr}", "error")
